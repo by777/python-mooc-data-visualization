@@ -14,3 +14,10 @@
 3. 矢量数据场
     1. 直接法
     2. 流线法
+
+### TVTK帮助资源
+
++ TVTK库中类名去除了前缀vtk
++ 函数名按照Python惯例，采用下划线：
+    AddItem -> add_item
++ VTK对象的方法在TVTK中用traits属性代替
