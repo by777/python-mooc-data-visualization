@@ -2,7 +2,7 @@
 # @Time : 20/08/06 23:31
 # @Author : Xu Bai
 # @File : 创建三维对象.py
-# @Desc :
+# @Desc : 利用pipeline创建图形对象窗口
 
 '''
 traits:(属性)
@@ -11,6 +11,20 @@ ConeSource: 圆锥
 CylinderSource： 圆柱
 ArcSource：圆弧
 ArrowSource： 箭头
+
+管线：
+可视化管线（Visualization Pipeline）：将原始数据加工成图形数据的过程
+图形管线（Graphics Pipeline）：将图形数据加工成我们看到的图像的过程
+
+过程：
+①数据 <-> ②数据预处理 <-> ③数据映射 <-> ④绘制（Rendering） <-> ⑤显示（Display）
+其中①②是可视化管线
+对应CubeSource（PolyData）和PolyDataMapper(Mapper)
+③④⑤是图形管线：
+Actor：场景中的一个实体，它包括一个图形数据（mapper），具有描述该实体的位置、方向、大小的属性
+Renderer：渲染的场景。它包括多个要渲染的Actor
+RenderWindow：渲染用的图形窗口，包含一个或多个Render
+RenderWindowInteracor：提供交互功能
 '''
 
 from tvtk.api import tvtk
