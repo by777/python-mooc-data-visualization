@@ -57,10 +57,14 @@ def f(x, y):
 
 
 x, y = np.mgrid[-7.:7.05:0.1, -5.:5.05:0.05]
-s = mlab.surf(x, y, f)
+# 改变颜色
+print("改变颜色")
+mlab.figure(bgcolor=(1, 1, 1))
+s = mlab.surf(x, y, f, colormap='cool')
 mlab.show()
 
 print("------------contour_surf()------------\n")
+
 s = mlab.contour_surf(x, y, f)
 mlab.show()
 
